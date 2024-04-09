@@ -1,0 +1,32 @@
+A voting application using which we can vote candidates in election!
+
+functionality:
+-user sign in/sign up
+-one vote only
+-listing all candidates
+-route which shows live voting of the candidates sorted by number of votes
+-users must have aadhaar number to sign in/sign up
+-there should be admin of app who can't vote
+-user can change their password
+
+Routes:
+
+1. Authentication:
+ /signup : POST - create new user
+ /signin : POST - user login using AADHAAR and Password 
+
+2. Voting: 
+ /candidates : GET - Get the list of candidates
+ /vote/:candidateId : POST - vote for a candidate
+
+3. Vote Counts:
+ /vote/counts : GET - Get the list of candidates sorted by their votes 
+
+4. User Profile:
+ /profile : GET - get users profile
+ /profile/password : PUT - change user's password 
+
+5 Admin candidate management:
+ /candidates : POST - new candidate
+ /candidates/:candidateId : PUT - update existing candidate 
+ /candidates/:candidateId : DELETE - delete existing candidate 
